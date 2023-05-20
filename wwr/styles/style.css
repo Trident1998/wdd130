@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Frank+Ruhl+Libre&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -11,8 +13,13 @@
     width: 80px;
 }
 
+#logo_link {
+    padding-top: 5px;
+}
+
 .icon {
     width: 80px;
+    padding-top: 10px
 }
 
 #hero-img {
@@ -31,8 +38,16 @@ main section {
     text-align: center;
 }
 
+main section img {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #7a90ac;
+    font-family:  Lato, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -43,6 +58,7 @@ nav a {
     text-align: center;
     color: #e4e6e8;
     text-decoration: none;
+    padding: 35px;
 }
 
 nav a:hover{
@@ -54,6 +70,10 @@ nav a:hover{
     background-color: #315f89;
     color: #e4e6e8;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .book:hover, .join:hover {
@@ -67,27 +87,51 @@ nav a:hover{
 
 .home-title {
     color: #e4e6e8;
+    font-family: "Frank Ruhl Libre";
+    font-size: 2em;
+    margin-top: 10px;
 }
 
 h4 {
     color: #e4e6e8;
 }
 
+h2 {
+    margin: 0;
+}
+
+.card-img {
+    border: 10px solid #E4E6E8;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+} 
+
 .msg {
     background-color: #315f89;
+    line-height: 1.5em;
+    padding: 35px;
 }
 
 .msg h2 {
     color: #e4e6e8;
+    font-family: "Frank Ruhl Libre";
 }
 
 .msg p {
     color: #e4e6e8;
+    font-size: 18px;
+    padding-bottom: 15px;
 }
+
+
 
 footer {
     background-color: #3e5064;
     color:  #e4e6e8;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 footer a {
@@ -105,4 +149,8 @@ footer p a:hover {
 
 footer a:hover {
     color:  #7a90ac;
+}
+
+footer .social img {
+    padding-top: 15px;
 }
