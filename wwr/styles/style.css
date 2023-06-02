@@ -16,7 +16,7 @@ nav {
 }
 
 .logo {
-    width: 80px;
+    width: 100%;
 }
 
 #logo_link {
@@ -42,11 +42,13 @@ nav {
 
 #hero-img {
     width: 100%;
+    background-color:black;
 }
 
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
-    color: #63768e
+    color: #e4e6e8;
+    text-shadow: 2px 2px 10px black;
 }
 
 #hero-msg {
@@ -261,6 +263,22 @@ footer .social img {
     #hero-msg h4 {
         display: none;
     }
+
+    .book {
+        background-color: #315f89;
+        color: #e4e6e8;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 30px;
+        margin-top: 50px;
+        border-radius: 5px;
+    }
+
+    .book:hover {
+        color: #3e5064;
+        background-color: #315f89;
+    }
+
     .home-title {
         font-size: 25px;
         color: #6f7364;
