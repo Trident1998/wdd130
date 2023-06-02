@@ -47,29 +47,28 @@
   width: 100px; 
   height: 100px; 
   background-color: green; 
-  grid-column: 2/5;
-  grid-row: 2/5;
+  grid-column: 2/4;
+  grid-row: 2/4;
 } 
 .yellow2 {
   width: 100px; 
   height: 100px; 
   background-color: gold; 
-  grid-column: 3/6;
-  grid-row: 3/6;
+  grid-column: 3/5;
+  grid-row: 3/5;
 } 
 .blue2 {
   width: 100px; 
   height: 100px; 
   background-color: blue;   
-  grid-column: 4/7;
-  grid-row: 4/7;
+  grid-column: 4/6;
+  grid-row: 4/6;
 
 } 
 /* Activity 3 styles */ 
 .content3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
   column-gap: 10%;
 }
 .red3 {
@@ -88,7 +87,7 @@
   width: 100%; 
   height: 200px; 
   background-color: gold;
-  grid-column: 2/4;
+  grid-column: 2;
 } 
 .blue3 {
   width: 100%;
@@ -99,36 +98,35 @@
 /* Activity 4 styles */ 
 .content4 {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
   height: 400px;
 }
 .red4 {
   width: 100%; 
   height: 100%; 
   background-color: red; 
-  grid-column: 1/4;
+  grid-column: 1;
   grid-row: 1/4;
 } 
 .green4 {
   width: 100%; 
   height: 100%; 
   background-color: green; 
-  grid-column: 4/7;
+  grid-column: 2;
   grid-row-start: 1;
 } 
 .yellow4 {
   width: 100%; 
   height: 100%; 
   background-color: gold;   
-  grid-column: 4/7;
+  grid-column: 2;
   grid-row-start: 2;
 } 
 .blue4 {
   width: 100%; 
   height: 100%;
   background-color: blue; 
-  grid-column: 4/7;
+  grid-column: 2;
   grid-row-start: 3;
 } 
 /* Activity 5 styles */ 
@@ -151,7 +149,7 @@
 } 
 .yellow5 {
   width: 100%; 
-  min-height: 400px;
+  min-height: 200px;
   background-color: gold;  
 } 
 .blue5 {
@@ -164,7 +162,6 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  justify-items: center;
   height: 600px;
 }
 .red6 {
