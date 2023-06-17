@@ -297,6 +297,7 @@ footer .social img {
     display: flex;
     background: #e4e6e8;
     color: #3E5064;
+    margin-bottom: 100px;
 }
 
 .arizona-river .text {
@@ -311,6 +312,12 @@ footer .social img {
     width: 500px;
     height: 500px;
     object-fit: cover;
+}
+
+iframe {
+    width: 1350px;
+    height: 675px;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 900px) {
