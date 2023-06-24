@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <title>The Ukrainian War</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -18,7 +14,6 @@
                 <img class="logo" src="images/logo.png" alt="Logo image">
             </a>
             <nav>
-                <a href="site-plan.html">Site Plan</a>
                 <a href="index.html">Home</a>
                 <a href="rebilding.html">Rebilding</a>
                 <a href="stories.html">Stories</a>
@@ -27,48 +22,29 @@
                 </a>
             </nav>
         </header>
-        <div class="main-slider">
-            <div class="slides">
-                <!-- Radio Button Start  -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!-- Radio Button Close  -->
-
-                <!-- Slide Image Start -->
-                <div class="slide first">
-                    <img src="images/home-page/baner1.jpg" alt="">
+        <div class="main-banner">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="images/home-page/baner1.jpg" style="width:100%">
                 </div>
-                <div class="slide">
-                    <img src="images/home-page/baner2.jpg" alt="">
+                <div class="slide fade">
+                    <img src="images/home-page/baner2.jpg" style="width:100%">
+                </div>        
+                <div class="slide fade">
+                    <img src="images/home-page/baner3.jpg" style="width:100%">
                 </div>
-                <div class="slide">
-                    <img src="images/home-page/baner3.jpg" alt="">
+                <div class="slide fade">
+                    <img src="images/home-page/baner4.jpg" style="width:100%">
                 </div>
-                <div class="slide">
-                    <img src="images/home-page/baner4.jpg" alt="">
-                </div>
-                <!-- Slide Image Close -->
-
-                <!-- Automatic Navigation Start -->
-                <div class="navigation-auto">
-                    <div class="auto-btn-1"></div>
-                    <div class="auto-btn-2"></div>
-                    <div class="auto-btn-3"></div>
-                    <div class="auto-btn-4"></div>
-                </div>
-                <!-- Automatic Navigation Close -->
             </div>
-              <!-- Mannual Navigation Start -->
-            <div class="navigation-mannual">
-                <label for="radio1" class="mannual-btn"></label>
-                <label for="radio2" class="mannual-btn"></label>
-                <label for="radio3" class="mannual-btn"></label>
-                <label for="radio4" class="mannual-btn"></label>
+            <br>
+            
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
             </div>
-            <!-- Mannual Navigation Close -->
-
             <h1>THE WAR IN URAINE</h1>
         </div>
         
@@ -233,33 +209,26 @@
         </footer>    
     </div>
     <script>
-    var counter = 1;
-    setInterval(function()  {
-      document.getElementById('radio'+ counter).checked = true;
-      counter++; 
+    let slideIndex = 0;
+    showSlides();
 
-      if(counter>4){
-        counter=1
-      }
+    function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000);  
+    }
 
-    }, 5000);
-
-
-    $('.slide-show').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.slide-show',
-  
-  centerMode: true,
-  focusOnSelect: true,
-  arrows: false,
-});       
   </script>
 </body>
 
