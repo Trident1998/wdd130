@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides1" src="images/home-page/Buchan/Buchan.jfif" style="width:100%">
+  <img class="mySlides1" src="images/home-page/Buchan/Buchan1.jpg" style="width:100%">
+  <img class="mySlides1" src="images/home-page/Buchan/Buchan2.jfif" style="width:100%">
+  <img class="mySlides1" src="images/home-page/Buchan/Buchan3.jpg" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0, 0)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0, 0)">&#10095;</button>
+</div>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides2" src="images/home-page/olenivka/olenivka.png" style="width:100%">
+  <img class="mySlides2" src="images/home-page/olenivka/olenivka1.png" style="width:100%">
+  <img class="mySlides2" src="images/home-page/olenivka/olenivka2.png" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1, 0)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1, 0)">&#10095;</button>
+</div>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides3" src="images/home-page/kakhovka-hydroelectric-power-station/dog.png" style="width:100%">
+  <img class="mySlides3" src="images/home-page/kakhovka-hydroelectric-power-station/citi-in-water.jpeg" style="width:100%">
+  <img class="mySlides3" src="images/home-page/kakhovka-hydroelectric-power-station/citi-in-water1.png" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1, 1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1, 1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = [1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+showDivs(1, 0, 0);
+showDivs(1, 1, 0);
+showDivs(1, 1, 0);
+
+function plusDivs(n, no, noo) {
+  showDivs(slideIndex[noo] += n, no, noo);
+}
+
+function showDivs(n, no, noo) {
+  var i;
+  var x = document.getElementsByClassName(slideId[noo]);
+  if (n > x.length) {slideIndex[noo] = 1}
+  if (n < 1) {slideIndex[noo] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex[noo]-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
