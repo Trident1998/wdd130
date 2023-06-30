@@ -148,7 +148,7 @@ nav a:hover{
   .text {font-size: 11px}
 }
 
-.introduction p {
+main p {
     padding: 0 50px;
 }
 
@@ -161,7 +161,6 @@ main h3 {
 article {
     display: grid;
     grid-column: 1fr 1fr;
-    align-items: center;
 }
 
 .baner {
@@ -200,52 +199,70 @@ article {
     background-color:  rgba(0, 0, 0, 0)!important; 
 }
 
-.w3-display-right, .w3-display-left {
-    font-size: 50px;
-    position: absolute;
+.w3-display-right {
+    position: relative;
+    bottom: 250px;
+    right: 250px;
     transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
 }
 
-.w3-display-right {
-    top: 250px;
-    right: -60px;
-}
-
-.w3-display-left {
-    top: 250px;
-    left: -60px;
-    padding: 8px 10px;
-}
-
-
-.mySlides1, .mySlides2, .mySlides3 {
+.mySlides1 {
     width: 500px;
     height: 500px;
     object-fit: cover;
 }
 
-.first-article .text, .third-article .text {
-    padding: 0 70px 0 20px;
-    text-align: justify;
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+.slider-box {
+    background:#ccc;
+    width:500px;
+    display:block;
+    margin:0 auto;
+    padding: 200px;
 }
 
-.first-article .w3-content, .third-article .w3-content {
-    margin-right: 50px;
+.slide-show img {
+    width: 800px;
+    height: 500px;
+} 
+
+.slider-nav img {
+    width: 200;
+    height: 200px;
+} 
+
+
+.icon {
+    width: 80px;
+    padding-top: 10px
 }
-
-.second-article .w3-content {
-    grid-row: 2;
-    grid-column: 1;
-    margin-left: 50px;
-}
-
-.second-article .text {
-    padding: 0 20px 0 70px;
-    text-align: justify;
-}
-
-
 
 
 .home-title {
@@ -268,19 +285,14 @@ footer {
     background-color: #2d2a2e;
     color:  #e4e6e8;
     padding: 25px 50px;
-    margin-top: 100px;
+    margin-top: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-
 .social img {
      width: 80px 
-}
-
-.social .united24 {
-    width: 200px 
 }
 
 footer a {
@@ -302,6 +314,147 @@ footer a:hover {
 
 footer .social img {
     padding-top: 15px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.idaho-river {
+    display: flex;
+    background: #e4e6e8;
+    margin-bottom: 100px;
+    color: #3E5064;
+}
+
+.idaho-river .text {
+    padding: 50px 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.idaho-river img {
+    margin: 50px 50px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.utah-river {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 100px;
+    color: #E4E6E8;
+}
+
+.utah-river .text {
+    padding: 50px 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+}
+
+.utah-river .text h2 {
+    text-align: right;
+}
+
+.utah-river img {
+    margin: 50px 50px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.arizona-river {
+    display: flex;
+    background: #e4e6e8;
+    color: #3E5064;
+    margin-bottom: 100px;
+}
+
+.arizona-river .text {
+    padding: 50px 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.arizona-river img {
+    margin: 50px 50px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+iframe {
+    width: 1350px;
+    height: 675px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    margin-top: 200px;
+}
+
+ul {
+    list-style: none;
+}
+
+form li + li {
+    margin-top: 3%;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    margin: 0 auto;
+    width: 85%;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 15em;
+}
+
+.button {
+    padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+    height: 3%;
+    width: 30%;
+    margin-left: 0.5em;
+}
+
+
+#feedback {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    display: none;      
+}
+.moveDown {
+    margin-top: 3em;
 }
   
 
