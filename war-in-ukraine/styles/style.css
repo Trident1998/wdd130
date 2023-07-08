@@ -62,6 +62,8 @@ nav a {
     text-decoration: none;
     padding: 30px 50px;
     margin: auto 0;
+    text-shadow: 1px 1px 1px #000, 
+                 3px 3px 5px black; 
 }
 
 nav a:hover{
@@ -86,13 +88,19 @@ nav a:hover{
     margin-top: -100px;
 }
 
-.slideshow-container {
+.slideshow-container, .main-image {
     grid-row: 1;
     grid-column: 1;
     justify-items: center;
     align-items: center;
     position: relative;
     margin: auto;
+}
+
+.main-image {
+    width: 1300px;
+    height: 800px;
+    object-fit: cover;
 }
 
 .slideshow-container img {
@@ -108,6 +116,7 @@ nav a:hover{
     margin: auto auto;
     z-index: 1;
     font-size: 65px;
+    text-shadow: 3px 3px 12px black
 }
 
 .united24 img {
@@ -151,8 +160,15 @@ nav a:hover{
   .text {font-size: 11px}
 }
 
-.introduction p {
+.introduction {
+    margin-bottom: 50px;
+}
+
+.introduction h4 {
     padding: 0 50px;
+    font-family: 'PT Sans',  sans-serif;
+    font-size: 24px;
+    font-weight: normal;
 }
 
 main h3 {
@@ -229,7 +245,7 @@ article {
 }
 
 .first-article .text, .third-article .text {
-    padding: 0 70px 0 20px;
+    padding: 0 0px 0 20px;
     text-align: justify;
 }
 
@@ -244,8 +260,12 @@ article {
 }
 
 .second-article .text {
-    padding: 0 20px 0 70px;
+    padding: 0 20px 0 0;
     text-align: justify;
+}
+
+.first-article .baner {
+    margin-top: 0;
 }
 
 .home-title {
@@ -262,6 +282,64 @@ article {
     grid-column: 6/10;
     grid-row: 6/7;
     z-index: 1;
+}
+
+
+/* Rebuilding page style */
+
+.colored-background, .non-colored-background {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 25px 0;
+    margin: 25px;
+}
+
+.colored-background {
+    background-color: #e4e4cb;
+}
+
+.colored-background img, .non-colored-background img  {
+    grid-column: 1;
+    grid-row: 1;
+    width: 610px;
+    height: 500px;
+}
+
+.colored-background img {
+    justify-self: start;
+    margin-left: 50px;
+}
+
+.non-colored-background img {
+    justify-self: end;
+    margin-right: 50px;
+}
+
+.colored-background .text, .non-colored-background .text {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #36445f;
+    padding: 25px;
+    border-radius: 75px;
+}
+
+.colored-background .text {
+    justify-self: end;
+    margin-right: 50px;
+    max-width: 650px;
+}
+
+.non-colored-background .text {
+    justify-self: start;
+    margin-left: 50px;
+    max-width: 650px;
+}
+
+.colored-background p, .non-colored-background p  {
+    font-size: 18px;
 }
 
 footer {
@@ -288,7 +366,7 @@ footer a {
 }
 
 footer p {
-    font-size: 1.3em;
+    font-size: 18px;
 }    
 
 footer p a:hover {
